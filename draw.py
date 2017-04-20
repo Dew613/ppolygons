@@ -20,31 +20,33 @@ def normal(x, y, z, x1, y1, z1, x2, y2, z2):
     return l
 
 def draw_polygons( points, screen, color ):
+   # print points
     if len(points) < 3:
         print 'Need at least 3 points to draw'
         return
 
-        i = 0
-        while i < len(points) - 2:
-            x = points[i][0]
-            y = points[i][1]
-            z = points[i][2]
+    i = 0
+    while i < len(points) - 2:
+    # print i
+        x = points[i][0]
+        y = points[i][1]
+        z = points[i][2]
 
-            x1 = points[i+1][0]
-            y1 = points[i+1][1]
-            z1 = points[i+1][2]
+        x1 = points[i+1][0]
+        y1 = points[i+1][1]
+        z1 = points[i+1][2]
 
-            x2 = points[i+2][0]
-            y2 = points[i+2][1]
-            z2 = points[i+2][2]
+        x2 = points[i+2][0]
+        y2 = points[i+2][1]
+        z2 = points[i+2][2]
 
-            v = normal(x, y, z, x1 , y1, z1, x2, y2, z2)
+        v = normal(x, y, z, x1 , y1, z1, x2, y2, z2)
 
-            if (v[2]> 0):
-                 draw_line(int(x), int(y), int(x1), int(y1), screen, color)
-                 draw_line(int(x1), int(y1), int(x2), int(y2), screen, color)
-                 draw_line(int(x), int(y), int(x2),int(y2), screen, color)
-            i += 3
+        if (v[2]> 0):
+            draw_line(int(x), int(y), int(x1), int(y1), screen, color)
+            draw_line(int(x1), int(y1), int(x2), int(y2), screen, color)
+            draw_line(int(x), int(y), int(x2),int(y2), screen, color)
+        i += 3
                 
 def add_box( points, x, y, z, width, height, depth ):
     w = x + width

@@ -1,21 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @Dew613
- Sign out
- Watch 2
-  Star 2
- Fork 11 mks66/dwsource
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs
-Branch: master Find file Copy pathdwsource/polygons/base_python/script
-97b179a  17 days ago
-@jonalf jonalf added polygon source
-1 contributor
-RawBlameHistory     
-89 lines (88 sloc)  928 Bytes
 #test box mesh
 box
 0 0 0 200 100 400
@@ -104,5 +86,3 @@ move
 250 250 0
 apply
 display
-Contact GitHub API Training Shop Blog About
- 2017 GitHub, Inc. Terms Privacy Security Status Help
